@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de contato</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbxkkSPHfQZKo_piwqK2taIVd4qUEVzUA&libraries=places&callback=initAutocomplete" async defer></script>
+    
+    <link type="text/css" rel="stylesheet" href="css/style.css" media="all">
+    <!--script src="js/mock.json"></script-->
+    
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="formulario">
+            <form name="form" id="form">
+                <div class="camposText fullName">
+                    <input type="text" name="txtFullname" id="txtFullname" class="input" required>
+                    <label>Nome</label>
+                </div>
+
+                <div class="camposText cpf">
+                    <input type="text" name="txtCpf" onkeyup="validaCampo(this.id)" id="txtCpf" class="input" required>
+                    <label>Cpf</label>
+                </div>
+
+                <div class="camposText telefone">
+                    <input type="text" name="txtTelephone" onkeyup="validaCampo(this.id)" id="txtTelephone" class="input" required>
+                    <label>Telefone</label>
+                </div>
+
+                <div class="camposText address">
+                    <input type="text" name="txtAddress" placeholder="" id="txtAddress" class="input" required>
+                    <label>Endereço</label>
+                </div>
+
+                <div id="map">
+                    
+                </div>
+
+                <div class="camposText complement">
+                    <input type="text" name="txtComplement" id="txtComplement" onkeyup="validaCampo(this.id)" class="input">
+                    <label class="lblComplement">Complemento</label>
+                </div>
+
+                <div class="inputImage">
+                    <input type="file" name="uplImage" id="uplImage" class="upload-button" />
+                    <label for="uplImage">Selecione uma imagem de perfil</label>
+                </div>
+
+                <div id="divThumbImg">
+                    
+                </div>
+
+                <div class="save">
+                    <button name="btnSave" id="btnSave" class="input" onclick="Adicionar()">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 
+    CRUD                        
+    OO                        
+    es6                        
+    CSS
+    validação
+    -->
+
+    <script src="js/endereco-maps.js"></script>
+    <script src="js/upimage.js"></script>
+    <script src="js/form.js"></script>
+
+</body>
+
+</html>
