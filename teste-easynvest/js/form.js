@@ -1,3 +1,5 @@
+document.querySelector('form').onkeypress = function(){return false}
+
 function validaCampo(input){
     if(input == 'txtCpf'){
         var cpf = document.getElementById(input).value;

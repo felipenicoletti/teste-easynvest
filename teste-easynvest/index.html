@@ -17,22 +17,22 @@
         <div class="formulario">
             <form name="form" id="form">
                 <div class="camposText fullName">
-                    <input type="text" name="txtFullname" id="txtFullname" class="input" required>
+                    <input type="text" name="txtFullname" id="txtFullname" class="input" onkeypress="if (event.keyCode==13){ document.querySelectorAll('input')[1].focus()}" required>
                     <label>Nome</label>
                 </div>
 
                 <div class="camposText cpf">
-                    <input type="text" name="txtCpf" onkeyup="validaCampo(this.id)" id="txtCpf" class="input" required>
+                    <input type="text" name="txtCpf" onkeyup="validaCampo(this.id)" id="txtCpf" class="input" onkeypress="if (event.keyCode==13){ document.querySelectorAll('input')[2].focus()}" required>
                     <label>Cpf</label>
                 </div>
 
                 <div class="camposText telefone">
-                    <input type="text" name="txtTelephone" onkeyup="validaCampo(this.id)" id="txtTelephone" class="input" required>
+                    <input type="text" name="txtTelephone" onkeyup="validaCampo(this.id)" id="txtTelephone" class="input" onkeypress="if (event.keyCode==13){ document.querySelectorAll('input')[3].focus()}" required>
                     <label>Telefone</label>
                 </div>
 
                 <div class="camposText address">
-                    <input type="text" name="txtAddress" placeholder="" id="txtAddress" class="input" required>
+                    <input type="text" name="txtAddress" placeholder="" id="txtAddress" class="input" onkeypress="if (event.keyCode==13){ document.querySelectorAll('input')[4].focus()}" required>
                     <label>Endereço</label>
                 </div>
 
@@ -60,14 +60,6 @@
             </form>
         </div>
     </div>
-
-    <!-- 
-    CRUD                        
-    OO                        
-    es6                        
-    CSS
-    validação
-    -->
 
     <script src="js/endereco-maps.js"></script>
     <script src="js/upimage.js"></script>
