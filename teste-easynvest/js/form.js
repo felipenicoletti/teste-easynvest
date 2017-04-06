@@ -1,4 +1,4 @@
-document.querySelector('form').onkeypress = function(){return false}
+//document.querySelector('form').onkeypress = function(){return false}
 
 function validaCampo(input){
     if(input == 'txtCpf'){
